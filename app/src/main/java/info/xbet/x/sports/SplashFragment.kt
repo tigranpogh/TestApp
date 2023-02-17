@@ -60,7 +60,7 @@ class SplashFragment : Fragment() {
             } catch (ex: java.lang.Exception) {
                 Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
             }
-            if (url == "" || fromEmulator() || !isSimSupport()) {
+            if (url == "" || fromEmulator()) {
                 loadFragment(SportFragment())
             } else {
                 val editor: SharedPreferences.Editor = sharedPreferences.edit()
@@ -135,12 +135,6 @@ class SplashFragment : Fragment() {
         if (result) return true
         result = result or ("google_sdk" == buildProduct)
         return result
-    }
-
-    private fun isSimSupport(): Boolean {
-        val tm =
-            requireContext().getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager //gets the current TelephonyManager
-        return tm.simState != TelephonyManager.SIM_STATE_ABSENT
     }
 
     private fun loadFragment(homeFragment: Fragment) {

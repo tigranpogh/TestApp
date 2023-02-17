@@ -50,6 +50,61 @@ class SportFragment : Fragment() {
         binding.layoutSaka.setOnClickListener {
             showDialog("Bukayo Saka", "Bukayo Ayoyinka T. M. Saka[4] (born 5 September 2001) is an English professional footballer who plays as a winger, left-back, or midfielder for Premier League club Arsenal and the England national team. Saka is known for his attacking incisiveness and creativity, and is often considered one of the best young football players in the world.[5][6][7]")
         }
+
+        binding.layoutKvara.setOnClickListener {
+            showDialog("Khvicha Kvaratskhelia", "Khvicha Kvaratskhelia (Georgian: ხვიჩა კვარაცხელია, romanized: khvicha k'varatskhelia; born 12 February 2001, in short Kvara) is a Georgian professional footballer who plays as a winger for Serie A club Napoli and the Georgia national team.[1]\n" +
+                    "\n" +
+                    "Club career\n" +
+                    "Early career\n" +
+                    "Coming through the youth system, Kvaratskhelia began his senior career at Dinamo Tbilisi in 2017, before joining Rustavi one year later.[2]\n" +
+                    "\n" +
+                    "Due to his performance at the Georgian U17 team, in 2017 Kvaratskhelia became the first winner of the newly introduced Aleksandre Chivadze golden medal, annually awarded by GFF to talented young players.[3] The next year he received a silver medal among U19 players.[4]\n" +
+                    "\n" +
+                    "In 2018, The Guardian named Kvaratskhelia among 60 best young players worldwide.[5]")
+        }
+
+        binding.layoutCamavinga.setOnClickListener {
+            showDialog("Eduardo Camavinga", "Eduardo Celmi Camavinga (born 10 November 2002) is a French professional footballer who plays as a midfielder for La Liga club Real Madrid. Born in Angola, he plays for the France national team.\n" +
+                    "\n" +
+                    "Early life\n" +
+                    "Camavinga was born in a refugee camp in Cabinda, Angola in 2002, to Congolese parents from Brazzaville.[4][5] He has five siblings. His family moved to France when he was two. They moved to Fougères, where he grew up. He practiced judo for a time, before giving it up to focus solely on football. In 2013, the Camavingas' house was burnt down, destroying most of the family's property; Camavinga stated that this was a source of motivation that pushed him to pursue a career in football and help his family.[6]\n" +
+                    "\n" +
+                    "On 7 July 2020, he obtained the Baccalauréat ES (Economic and Social) without mention.[7][8]")
+        }
+
+        binding.layoutGarnacho.setOnClickListener {
+            showDialog("Alejandro Garnacho", "Alejandro Garnacho Ferreyra (born 1 July 2004) is a professional footballer who plays as a winger for Premier League club Manchester United.\n" +
+                    "\n" +
+                    "Garnacho joined Manchester United's youth system from Atlético Madrid in October 2020. He won the FA Youth Cup and the Jimmy Murphy Young Player of the Year award in May 2022. The month before, he had made his first-team debut at the age of 17, in a Premier League game against Chelsea.\n" +
+                    "\n" +
+                    "Garnacho initially played youth international football for Spain, the country of his birth, before making his debut for Argentina at under-20 level in 2022. He has been called up to the senior Argentina squad but has yet to make an appearance.")
+        }
+
+        binding.layoutMartinelli.setOnClickListener {
+            showDialog("Gabriel Martinelli", "Gabriel Teodoro Martinelli Silva (born 18 June 2001), known as Gabriel Martinelli, is a Brazilian professional footballer who plays as a forward for Premier League club Arsenal and the Brazil national team.\n" +
+                    "\n" +
+                    "Born and raised in Guarulhos, Martinelli began his senior club career playing for Ituano and signed for Arsenal in July 2019, aged 18. He won the FA Cup in his debut season.\n" +
+                    "\n" +
+                    "At the international level, Martinelli represents the Brazil under-23s. He helped Brazil win an Olympic Gold in men's football at the 2020 Summer Olympics. He made his senior debut in 2022 and was part of Brazil's squad at the 2022 FIFA World Cup.")
+        }
+
+        binding.layoutMukoko.setOnClickListener {
+            showDialog("Youssoufa Moukoko", "Youssoufa Moukoko (born 20 November 2004) is a German professional footballer who plays as a striker for Bundesliga club Borussia Dortmund and the Germany national team. He is known for his scoring ability at younger age levels.[3]\n" +
+                    "\n" +
+                    "Club career\n" +
+                    "Early career\n" +
+                    "Moukoko played in the under-13 team of FC St. Pauli from 2014 to 2016 and scored 23 goals in 13 games as a striker in the U15.[citation needed]\n" +
+                    "\n" +
+                    "In July 2016, he was transferred to Borussia Dortmund's youth academy. He played as the only 13-year-old in the Under 17 Bundesliga for Dortmund. Moukoko moved up to the under-19 team for the 2019–20 season at the age of 14, scoring six goals in his first match in the Under 19 Bundesliga in a 9–2 win against Wuppertaler SV.[4] He completed his first UEFA Youth League match on 17 September 2019 against FC Barcelona, becoming the youngest player to be fielded in the competition.[5] On 23 October 2019, Moukoko scored the opening goal in a game against Inter Milan, making him the youngest scorer in the Youth League.[6] In total, Moukoko scored 141 goals in just 88 games for Dortmund's under-17 and under-19 sides. [7]")
+        }
+
+        binding.layoutSaliba.setOnClickListener {
+            showDialog("William Saliba", "William Alain André Gabriel Saliba (born 24 March 2001) is a French professional footballer who plays as a centre-back for Premier League club Arsenal and the France national team.\n" +
+                    "\n" +
+                    "Club career\n" +
+                    "Saint-Étienne\n" +
+                    "Saliba began playing football at the age of six, coached by the father of Kylian Mbappé.[4] He eventually moved south to Saint-Étienne in 2016,[5] and signed his first contract at age 17, in May 2018.[6] Saliba then made his professional debut on 25 September 2018, featuring in a 3–2 Ligue 1 win over Toulouse.[7] He made 13 starting appearances in his first season at Saint-Étienne.[8]")
+        }
     }
 
     override fun onDestroyView() {

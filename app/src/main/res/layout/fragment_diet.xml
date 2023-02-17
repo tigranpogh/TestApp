@@ -7,184 +7,402 @@
     tools:context="info.xbet.x.sports.SportFragment"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtTitle"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FOOTBALL BEST YOUNG PLAYERS"
-        android:gravity="center"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="#757489"
-        android:layout_marginTop="16dp"/>
+        android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutGavi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        android:background="@drawable/rounded_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp">
-
-        <ImageView
-            android:id="@+id/imgGavi"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/gavi"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gavi"
-            android:textColor="#EEEEF6"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imgGavi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:orientation="vertical">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FOOTBALL BEST YOUNG PLAYERS"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#757489"
+                android:layout_marginTop="16dp"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutMusi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutGavi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
 
-        <ImageView
-            android:id="@+id/imgMusiala"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/musiala"/>
+                <ImageView
+                    android:id="@+id/imgGavi"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/gavi"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jamal Musiala"
-            android:textColor="#EEEEF6"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imgMusiala"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gavi"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgGavi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutPedri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        android:background="@drawable/rounded_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutMusi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
 
-        <ImageView
-            android:id="@+id/imgPedri"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/pedri"/>
+                <ImageView
+                    android:id="@+id/imgMusiala"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/musiala"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pedri"
-            android:textColor="#EEEEF6"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imgPedri"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jamal Musiala"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgMusiala"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutBelingham"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        android:background="@drawable/rounded_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPedri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
 
-        <ImageView
-            android:id="@+id/imgBelinghem"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/belingham"/>
+                <ImageView
+                    android:id="@+id/imgPedri"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/pedri"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jude Bellingham"
-            android:textColor="#EEEEF6"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imgBelinghem"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pedri"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgPedri"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutSaka"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        android:background="@drawable/rounded_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutBelingham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
 
-        <ImageView
-            android:id="@+id/imgSaka"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/saka"/>
+                <ImageView
+                    android:id="@+id/imgBelinghem"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/belingham"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bukayo Saka"
-            android:textColor="#EEEEF6"
-            android:textSize="24sp"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imgSaka"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jude Bellingham"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgBelinghem"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSaka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgSaka"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/saka"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bukayo Saka"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgSaka"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutKvara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgKvara"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/kvrts"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Khvicha Kvaratskhelia"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgKvara"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutCamavinga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgCamavinga"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/camavinga"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eduardo Camavinga"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgCamavinga"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSaliba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgSaliba"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/saliba"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="William Saliba"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgSaliba"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutGarnacho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgGarnacho"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/garnacho"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alejandro Garnacho"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgGarnacho"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutMukoko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/imgMukoko"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/mukoko"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Youssoufa Moukoko"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgMukoko"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutMartinelli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                android:background="@drawable/rounded_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/imgMartinelli"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/martinelli"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gabriel Martinelli"
+                    android:textColor="#EEEEF6"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgMartinelli"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
