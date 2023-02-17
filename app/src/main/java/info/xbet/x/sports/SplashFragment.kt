@@ -8,7 +8,6 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,7 +57,6 @@ class SplashFragment : Fragment() {
             try {
                 val remoteConfig = getFirebaseRemoteConfig()
                 url = remoteConfig.getString("url")
-                Toast.makeText(requireContext(), url, Toast.LENGTH_LONG).show()
             } catch (ex: java.lang.Exception) {
                 Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
             }
