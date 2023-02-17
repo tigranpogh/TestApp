@@ -1,4 +1,4 @@
-package com.example.testapp
+package info.xbet.x.sports
 
 import android.content.Context
 import android.content.SharedPreferences

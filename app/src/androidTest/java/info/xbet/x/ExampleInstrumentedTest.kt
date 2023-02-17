@@ -1,4 +1,4 @@
-package com.example.testapp
+package info.xbet.x
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

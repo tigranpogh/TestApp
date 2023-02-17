@@ -1,12 +1,13 @@
-package com.example.testapp
+package info.xbet.x.sports
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.testapp.R
 
 class NoConnectionFragment : Fragment() {
 

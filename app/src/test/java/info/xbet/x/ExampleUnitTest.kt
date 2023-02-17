@@ -1,4 +1,4 @@
-package com.example.testapp
+package info.xbet.x
 
 import org.junit.Test
 

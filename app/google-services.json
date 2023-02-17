@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "159837132427",
-    "project_id": "testapp-bd77a",
-    "storage_bucket": "testapp-bd77a.appspot.com"
+    "project_number": "306348694208",
+    "project_id": "xbtig-24843",
+    "storage_bucket": "xbtig-24843.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:159837132427:android:a6293a393ca6d49341668e",
+        "mobilesdk_app_id": "1:306348694208:android:5265e85b4fd3c1c3536b25",
         "android_client_info": {
-          "package_name": "com.example.testapp"
+          "package_name": "info.xbet.x.sports"
         }
       },
       "oauth_client": [
         {
-          "client_id": "159837132427-vcnk61brgpc57o64456bpjb27me0vig4.apps.googleusercontent.com",
+          "client_id": "306348694208-79sgi30thu63oef5s8tolaab0keupn2i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBY0ltQ7FnEy4jQskn4wK2zWKsTJzRXRXI"
+          "current_key": "AIzaSyA0d3fl8zdq4gDu1gSKUL_Rd_7FN5iSANU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "159837132427-vcnk61brgpc57o64456bpjb27me0vig4.apps.googleusercontent.com",
+              "client_id": "306348694208-79sgi30thu63oef5s8tolaab0keupn2i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,4 +1,4 @@
-package com.example.testapp
+package info.xbet.x.sports
 
 import android.content.Context
 import android.content.Intent
@@ -8,14 +8,20 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.testapp.BuildConfig
+import com.example.testapp.R
 import com.example.testapp.databinding.FragmentSplashBinding
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import java.util.*
 
 
@@ -26,6 +32,11 @@ class SplashFragment : Fragment() {
 
     private val sharedPrefFile = "kotlinsharedpreference"
     private var url = ""
+    val DEFAULTS: HashMap<String, Any> =
+        hashMapOf(
+            "NEXT_BUTTON_TEXT" to "NEXT",
+            "NEXT_BUTTON_COLOR" to "#0091FF"
+        )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,8 +56,9 @@ class SplashFragment : Fragment() {
 
         if (savedUrl == "") {
             try {
-                val remoteConfig = FirebaseRemoteConfig.getInstance()
-                url = remoteConfig.getString("testkey")
+                val remoteConfig = getFirebaseRemoteConfig()
+                url = remoteConfig.getString("url")
+                Toast.makeText(requireContext(), url, Toast.LENGTH_LONG).show()
             } catch (ex: java.lang.Exception) {
                 Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
             }
@@ -138,5 +150,27 @@ class SplashFragment : Fragment() {
         transaction.replace(R.id.frameLayout, homeFragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    private fun getFirebaseRemoteConfig(): FirebaseRemoteConfig {
+
+        val remoteConfig = Firebase.remoteConfig
+
+        val configSettings = remoteConfigSettings {
+            if (BuildConfig.DEBUG) {
+                minimumFetchIntervalInSeconds = 0 // Kept 0 for quick debug
+            } else {
+                minimumFetchIntervalInSeconds = 60 * 60 // Change this based on your requirement
+            }
+        }
+
+        remoteConfig.setConfigSettingsAsync(configSettings)
+        remoteConfig.setDefaultsAsync(DEFAULTS)
+
+        remoteConfig.fetchAndActivate().addOnCompleteListener {
+//            Logger.d(TAG, "addOnCompleteListener")
+        }
+
+        return remoteConfig
     }
 }
