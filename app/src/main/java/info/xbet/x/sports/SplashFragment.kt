@@ -36,7 +36,6 @@ class SplashFragment : Fragment() {
             "NEXT_BUTTON_TEXT" to "NEXT",
             "NEXT_BUTTON_COLOR" to "#0091FF"
         )
-    val remoteConfig = getFirebaseRemoteConfig()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,9 +49,7 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Handler().postDelayed({
             runCheck()
-        }, 3000)
     }
 
     override fun onDestroyView() {
@@ -65,19 +62,7 @@ class SplashFragment : Fragment() {
             requireContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         val savedUrl = sharedPreferences.getString("url_key", "")
         if (savedUrl == "") {
-            try {
-                url = remoteConfig.getString("url")
-            } catch (ex: java.lang.Exception) {
-                Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
-            }
-            if (url == "" || fromEmulator()) {
-                loadFragment(SportFragment())
-            } else {
-                val editor: SharedPreferences.Editor = sharedPreferences.edit()
-                editor.putString("url_key", url)
-                editor.apply()
-                startActivity(Intent(requireContext(), OpenLinkActivity::class.java))
-            }
+            getFirebaseRemoteConfig()
         } else {
             if (checkForInternet()) {
                 startActivity(Intent(requireContext(), OpenLinkActivity::class.java))
@@ -149,7 +134,7 @@ class SplashFragment : Fragment() {
         transaction.commit()
     }
 
-    private fun getFirebaseRemoteConfig(): FirebaseRemoteConfig {
+    private fun getFirebaseRemoteConfig() {
 
         val remoteConfig = Firebase.remoteConfig
 
@@ -165,8 +150,22 @@ class SplashFragment : Fragment() {
         remoteConfig.setDefaultsAsync(DEFAULTS)
 
         remoteConfig.fetchAndActivate().addOnCompleteListener {
+            val sharedPreferences: SharedPreferences =
+                requireContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
+            url = remoteConfig.getString("url")
+            try {
+                url = remoteConfig.getString("url")
+            } catch (ex: java.lang.Exception) {
+                Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
+            }
+            if (url == "" || fromEmulator()) {
+                loadFragment(SportFragment())
+            } else {
+                val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                editor.putString("url_key", url)
+                editor.apply()
+                startActivity(Intent(requireContext(), OpenLinkActivity::class.java))
+            }
         }
-
-        return remoteConfig
     }
 }
