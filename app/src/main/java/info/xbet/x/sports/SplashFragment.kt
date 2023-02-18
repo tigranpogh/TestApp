@@ -7,7 +7,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
-import android.telephony.TelephonyManager
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +36,7 @@ class SplashFragment : Fragment() {
             "NEXT_BUTTON_TEXT" to "NEXT",
             "NEXT_BUTTON_COLOR" to "#0091FF"
         )
+    val remoteConfig = getFirebaseRemoteConfig()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,13 +50,22 @@ class SplashFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Handler().postDelayed({
+            runCheck()
+        }, 3000)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun runCheck() {
         val sharedPreferences: SharedPreferences =
             requireContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         val savedUrl = sharedPreferences.getString("url_key", "")
-
         if (savedUrl == "") {
             try {
-                val remoteConfig = getFirebaseRemoteConfig()
                 url = remoteConfig.getString("url")
             } catch (ex: java.lang.Exception) {
                 Toast.makeText(requireContext(), ex.message, Toast.LENGTH_LONG).show()
@@ -75,11 +85,6 @@ class SplashFragment : Fragment() {
                 loadFragment(NoConnectionFragment())
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     private fun checkForInternet(): Boolean {
@@ -152,7 +157,7 @@ class SplashFragment : Fragment() {
             if (BuildConfig.DEBUG) {
                 minimumFetchIntervalInSeconds = 0 // Kept 0 for quick debug
             } else {
-                minimumFetchIntervalInSeconds = 60 * 60 // Change this based on your requirement
+                minimumFetchIntervalInSeconds = 0 // Change this based on your requirement
             }
         }
 
@@ -160,7 +165,6 @@ class SplashFragment : Fragment() {
         remoteConfig.setDefaultsAsync(DEFAULTS)
 
         remoteConfig.fetchAndActivate().addOnCompleteListener {
-//            Logger.d(TAG, "addOnCompleteListener")
         }
 
         return remoteConfig
